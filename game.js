@@ -24,14 +24,24 @@ function boardGame() {
     allTiles[30].className = "win";
     allTiles[30].innerText = "magic stone";
 
-    var token1 = document.createTextNode("token1");
-    var token2 = document.createTextNode("token2");
 
-    var position1 = 0;
+    var player1Character = localStorage.getItem("player1Character");
+    var player2Character = localStorage.getItem("player2Character");
+
+
+    var token1 = document.createElement("span");
+    var player1 = document.createTextNode(player1Character)
+    token1.appendChild(player1);
+
+    var token2 = document.createElement("span");
+    var player2 = document.createTextNode(player2Character)
+    token2.appendChild(player2);
+
+    var position1 = 5;
     var position2 = 0;
 
     allTiles[0].appendChild(token1);
-    allTiles[0].appendChild(token2);
+    allTiles[1].appendChild(token2);
 
 
     player2Dice.disabled = true;
@@ -55,18 +65,12 @@ function boardGame() {
       number = Math.floor(Math.random() * 6) + 1;
       console.log("you got " + number);
 
-      switch (number) {
-        case 1:
-        // if allTiles[i] has child remove child
-          if (allTiles[i].hasChildNodes()) {
-            allTiles[i].removeChild(token1);
-          }
-
-          console.log('number one');
-          break;
-        default:
-
+      if (number === 2) {
+        token1.removeChild(player1);
+        allTiles[2].appendChild(token1);
+        token1.appendChild(player1);
       }
+
 
     }, false); // END of PLAYER 1
 
