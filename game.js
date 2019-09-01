@@ -37,18 +37,18 @@ function boardGame() {
     var player2 = document.createTextNode(player2Character)
     token2.appendChild(player2);
 
-    var position1 = 5;
+    var position1 = 0;
     var position2 = 0;
 
     allTiles[0].appendChild(token1);
-    allTiles[1].appendChild(token2);
+    allTiles[0].appendChild(token2);
 
 
+    var player2Dice = document.getElementById('player2Dice');
     player2Dice.disabled = true;
 
 
-
-    // PLAYER 1 CLICKY
+    // PLAYER 1
     var player1Dice = document.getElementById('player1Dice');
     player1Dice.addEventListener('click', function() {
 
@@ -61,18 +61,44 @@ function boardGame() {
         player1Dice.disabled = false;
       }
 
-    // generate number
+      // generate number
       number = Math.floor(Math.random() * 6) + 1;
       console.log("you got " + number);
 
-      if (number === 2) {
-        token1.removeChild(player1);
-        allTiles[2].appendChild(token1);
-        token1.appendChild(player1);
-      }
+      // move token
+      position1 = position1 + number;
+      token1.removeChild(player1);
+      allTiles[position1].appendChild(token1);
+      token1.appendChild(player1);
 
 
     }, false); // END of PLAYER 1
+
+
+    // PLAYER 2 
+    player2Dice.addEventListener('click', function() {
+
+      // edit this to match number 6, if number = less than 6
+        if (player2Dice.disabled === true) {
+          player2Dice.disabled = false;
+          player1Dice.disabled = true;
+        } else if (player1Dice.disabled === true) {
+          player2Dice.disabled = true;
+          player1Dice.disabled = false;
+        }
+
+      // generate number
+      number = Math.floor(Math.random() * 6) + 1;
+      console.log("you got " + number);
+
+      // move token
+      position2 = position2 + number;
+      token2.removeChild(player2);
+      allTiles[position2].appendChild(token2);
+      token2.appendChild(player2);
+
+
+    }, false); // END of PLAYER 2
 
   }
 
