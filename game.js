@@ -1,11 +1,11 @@
 function boardGame() {
 
+document.getElementById('dice-number').innerHTML = "Roll the dice"
 
   function createTile() {
       var tile = document.createElement("div");
-
       tile.className = "new-div";
-      tile.innerText = [i];
+      tile.innerHTML = [i] + "<br>";
 
       return tile;
     }
@@ -20,43 +20,50 @@ function boardGame() {
       board.appendChild(allTiles[i]);
     }
 
-    allTiles[0].className = "modified-div";
-    allTiles[0].innerText = "start";
+    allTiles[0].className = "start";
+    allTiles[0].innerText = "";
+    allTiles[0].style.backgroundColor = "#000";
     allTiles[30].className = "win";
-    allTiles[30].innerText = "magic stone";
+    allTiles[30].style.backgroundColor = "#333";
 
-    allTiles[4].style.backgroundImage = "url('characters/crystal-icon.png')";
-    allTiles[4].style.backgroundSize = "30%";
+    allTiles[30].style.backgroundImage = "url('crystal-icon-big.png')";
+    allTiles[30].style.backgroundSize = "45%";
+    allTiles[30].style.backgroundRepeat = "no-repeat";
+    allTiles[30].style.backgroundPosition= "center";
+
+
+    allTiles[4].style.backgroundImage = "url('characters/crystal-icon2.png')";
+    allTiles[4].style.backgroundSize = "25%";
     allTiles[4].style.backgroundRepeat = "no-repeat";
     allTiles[4].style.backgroundPosition= "center";
 
     allTiles[8].style.backgroundImage = "url('characters/crystal-icon.png')";
-    allTiles[8].style.backgroundSize = "30%";
+    allTiles[8].style.backgroundSize = "25%";
     allTiles[8].style.backgroundRepeat = "no-repeat";
     allTiles[8].style.backgroundPosition= "center";
 
-    allTiles[12].style.backgroundImage = "url('characters/crystal-icon.png')";
+    allTiles[12].style.backgroundImage = "url('characters/crystal-icon3.png')";
     allTiles[12].style.backgroundSize = "30%";
     allTiles[12].style.backgroundRepeat = "no-repeat";
     allTiles[12].style.backgroundPosition= "center";
 
-    allTiles[16].style.backgroundImage = "url('characters/crystal-icon.png')";
-    allTiles[16].style.backgroundSize = "30%";
+    allTiles[16].style.backgroundImage = "url('characters/crystal-icon4.png')";
+    allTiles[16].style.backgroundSize = "33%";
     allTiles[16].style.backgroundRepeat = "no-repeat";
     allTiles[16].style.backgroundPosition= "center";
 
-    allTiles[20].style.backgroundImage = "url('characters/crystal-icon.png')";
-    allTiles[20].style.backgroundSize = "30%";
+    allTiles[20].style.backgroundImage = "url('characters/crystal-icon5.png')";
+    allTiles[20].style.backgroundSize = "25%";
     allTiles[20].style.backgroundRepeat = "no-repeat";
     allTiles[20].style.backgroundPosition= "center";
 
     allTiles[24].style.backgroundImage = "url('characters/crystal-icon.png')";
-    allTiles[24].style.backgroundSize = "30%";
+    allTiles[24].style.backgroundSize = "25%";
     allTiles[24].style.backgroundRepeat = "no-repeat";
     allTiles[24].style.backgroundPosition= "center";
 
-    allTiles[28].style.backgroundImage = "url('characters/crystal-icon.png')";
-    allTiles[28].style.backgroundSize = "30%";
+    allTiles[28].style.backgroundImage = "url('characters/crystal-icon2.png')";
+    allTiles[28].style.backgroundSize = "25%";
     allTiles[28].style.backgroundRepeat = "no-repeat";
     allTiles[28].style.backgroundPosition= "center";
 
@@ -68,11 +75,55 @@ function boardGame() {
     var winner = "";
 
     var token1 = document.createElement("span");
-    var player1 = document.createTextNode(player1Character)
+    var player1 = document.createTextNode("P1");
+
+    switch (player1Character) {
+      case "JS":
+        token1.style.backgroundImage = "url('characters/jonsnow.jpg')";
+        break;
+      case "KD":
+        token1.style.backgroundImage = "url('characters/khaldrogo.jpg')";
+        break;
+      case "VT":
+        token1.style.backgroundImage = "url('characters/viserys.jpg')";
+        break;
+      case "GW":
+        token1.style.backgroundImage = "url('characters/greyworm.jpg')";
+        break;
+      case "TG":
+        token1.style.backgroundImage = "url('characters/tormund.jpg')";
+        break;
+      default:
+    }
+
+    token1.style.backgroundSize = "cover";
+    token1.style.backgroundRepeat = "no-repeat";
     token1.appendChild(player1);
 
     var token2 = document.createElement("span");
-    var player2 = document.createTextNode(player2Character)
+    var player2 = document.createTextNode("P2");
+
+    switch (player2Character) {
+      case "AS":
+        token2.style.backgroundImage = "url('characters/arya.jpg')";
+        break;
+      case "DT":
+        token2.style.backgroundImage = "url('characters/daenerys.jpg')";
+        break;
+      case "SS":
+        token2.style.backgroundImage = "url('characters/sansa.jpg')";
+        break;
+      case "M":
+        token2.style.backgroundImage = "url('characters/missandei.jpg')";
+        break;
+      case "MT":
+        token2.style.backgroundImage = "url('characters/margaery.jpg')";
+        break;
+      default:
+    }
+
+    token2.style.backgroundSize = "cover";
+    token2.style.backgroundRepeat = "no-repeat";
     token2.appendChild(player2);
 
     var position1 = 0;
@@ -102,6 +153,8 @@ function boardGame() {
       // generate number
       number = Math.floor(Math.random() * 6) + 1;
       console.log("you got " + number);
+
+      document.getElementById('dice-number').innerHTML = "You got " + number;
 
 
 
@@ -227,7 +280,7 @@ function boardGame() {
       number = Math.floor(Math.random() * 6) + 1;
       console.log("you got " + number);
 
-
+      document.getElementById('dice-number').innerHTML = "You got " + number;
 
         // move token
         position2 = position2 + number;

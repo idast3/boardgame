@@ -1,33 +1,73 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
 
+
 body {
   /*background-color: #2b2b2b;
   color: white;*/
   font-family: 'Lato', sans-serif;
   margin: 0;
+  background-color: #000;
+}
+
+.header {
+  background-color: #000;
+  height: 39vh;
+}
+
+.header img {
+  height: 30vh;
+  margin: 6vh 33vw;
 }
 
 div {
-  background-color: #e0e0e0;
+  background-color: #222;
   width: 100px;
   height: 100px;
   margin: 0px;
-  border: 2px solid #fff;
+  border: 1px solid #000;
+  font-size: 0.8em;
+  color: #777;
 }
 
-#start {
+/*#start {
   background-color: #999 !important;
+}*/
+
+.start {
+  text-transform: uppercase;
+
 }
 
 span {
   background-color: #000;
   color: #fff;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
   border-radius: 50%;
   margin: 1px;
   display: inline-block;
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-weight: bold;
+  /*border: 1px solid #444;*/
+}
 
+#board {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin: 5vh 33vw;
+}
+
+.dice {
+  height: auto;
+  margin: 3vh 33vw;
+  display: inline;
+}
+
+#dice-number {
+  background-color: none !important;
+  color: white;
+  margin: 1vh 33vw;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 2px;
 }
