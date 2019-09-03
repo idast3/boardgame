@@ -4,8 +4,8 @@ document.getElementById('dice-number').innerHTML = "Roll the dice"
 
   function createTile() {
       var tile = document.createElement("div");
-      tile.className = "new-div";
-      tile.innerHTML = [i] + "<br>";
+      tile.className = "tile-div";
+      tile.innerHTML = "<br>" + [i] + "<br>";
 
       return tile;
     }
@@ -155,7 +155,7 @@ document.getElementById('dice-number').innerHTML = "Roll the dice"
         document.getElementById('dice-number').innerHTML = "You got " + number;
       }
 
-      
+
       if (number < 6) {
         if (player2Dice.disabled === true) {
           player2Dice.disabled = false;

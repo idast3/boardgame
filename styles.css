@@ -11,19 +11,18 @@ body {
 
 .header {
   background-color: #000;
-  height: 39vh;
+
 }
 
 .header img {
-  height: 30vh;
-  margin: 6vh 33vw;
+  max-width: 50%;
+
 }
 
 div {
   background-color: #222;
   width: 100px;
   height: 100px;
-  margin: 0px;
   border: 1px solid #000;
   font-size: 0.8em;
   color: #777;
@@ -35,7 +34,6 @@ div {
 
 .start {
   text-transform: uppercase;
-
 }
 
 span {
@@ -51,22 +49,36 @@ span {
   /*border: 1px solid #444;*/
 }
 
+.game-page {
+  text-align: center;
+  width: 100%;
+}
+
+.boardgame {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
 #board {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  margin: 5vh 33vw;
+  margin-top: 50px;
+  grid-column-start: 2;
 }
 
 .dice {
   height: auto;
-  margin: 3vh 33vw;
+  /*margin: 3vh 33vw;*/
   display: inline;
 }
 
 #dice-number {
   background-color: none !important;
   color: white;
-  margin: 1vh 33vw;
+  /*margin: 1vh 33vw;*/
   text-transform: uppercase;
   font-size: 0.8em;
   letter-spacing: 2px;
@@ -81,7 +93,7 @@ span {
   height: 400px;
   width: 300px;
   margin: 0 auto;
-  margin-top: 15vh;
+  margin-top: 10vh;
 }
 
 a {
@@ -119,4 +131,17 @@ a {
   color: #999;
   line-height: 1.4em;
   margin-bottom: 40px;
+}
+
+footer {
+  bottom: 0;
+  background-color: #111;
+  color: #777;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  height: 100px;
+  padding-top: 50px;
+  margin-top: 800px;
+  text-align: center;
 }
