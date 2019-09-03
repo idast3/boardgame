@@ -97,6 +97,9 @@ a:hover {
 .btn {
   padding: 10px 15px;
   border: 1px solid black;
+  font-size: 0.9em;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .btn:hover {

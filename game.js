@@ -141,21 +141,30 @@ document.getElementById('dice-number').innerHTML = "Roll the dice"
     var player1Dice = document.getElementById('player1Dice');
     player1Dice.addEventListener('click', function() {
 
-    // edit this to match number 6, if number = less than 6
-      if (player2Dice.disabled === true) {
-        player2Dice.disabled = false;
-        player1Dice.disabled = true;
-      } else if (player1Dice.disabled === true) {
-        player2Dice.disabled = true;
-        player1Dice.disabled = false;
-      }
+
+
+
 
       // generate number
       number = Math.floor(Math.random() * 6) + 1;
       console.log("you got " + number);
 
-      document.getElementById('dice-number').innerHTML = "You got " + number;
+      if (number == 6) {
+        document.getElementById('dice-number').innerHTML = "You got " + number + " – roll again!";
+      } else if (number < 6) {
+        document.getElementById('dice-number').innerHTML = "You got " + number;
+      }
 
+      
+      if (number < 6) {
+        if (player2Dice.disabled === true) {
+          player2Dice.disabled = false;
+          player1Dice.disabled = true;
+        } else if (player1Dice.disabled === true) {
+          player2Dice.disabled = true;
+          player1Dice.disabled = false;
+        }
+      }
 
 
         // move token
@@ -267,20 +276,28 @@ document.getElementById('dice-number').innerHTML = "Roll the dice"
     // PLAYER 2
     player2Dice.addEventListener('click', function() {
 
-      // edit this to match number 6, if number = less than 6
-        if (player2Dice.disabled === true) {
-          player2Dice.disabled = false;
-          player1Dice.disabled = true;
-        } else if (player1Dice.disabled === true) {
-          player2Dice.disabled = true;
-          player1Dice.disabled = false;
-        }
+
 
       // generate number
       number = Math.floor(Math.random() * 6) + 1;
       console.log("you got " + number);
 
-      document.getElementById('dice-number').innerHTML = "You got " + number;
+      if (number == 6) {
+        document.getElementById('dice-number').innerHTML = "You got " + number + " – roll again!";
+      } else if (number < 6) {
+        document.getElementById('dice-number').innerHTML = "You got " + number;
+      }
+
+
+        if (number < 6) {
+          if (player2Dice.disabled === true) {
+            player2Dice.disabled = false;
+            player1Dice.disabled = true;
+          } else if (player1Dice.disabled === true) {
+            player2Dice.disabled = true;
+            player1Dice.disabled = false;
+          }
+        }
 
         // move token
         position2 = position2 + number;

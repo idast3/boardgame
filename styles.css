@@ -71,3 +71,52 @@ span {
   font-size: 0.8em;
   letter-spacing: 2px;
 }
+
+#congrats {
+  color: white;
+  text-align: center;
+}
+
+#winnerCard {
+  height: 400px;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 15vh;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+
+}
+
+.btn {
+  padding: 10px 15px;
+  border: 1px solid white;
+  display: inline-block;
+  font-size: 0.9em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.winner {
+  text-align: center;
+}
+
+.big-stone {
+  margin: 40px 0px 5px 0px;
+  height: 150px;
+}
+
+
+#description {
+  color: #999;
+  line-height: 1.4em;
+  margin-bottom: 40px;
+}
