@@ -1,5 +1,4 @@
 var winner = localStorage.getItem("Winner");
-console.log(winner + " has won the game");
 
 var winnerCard = document.getElementById('winnerCard');
 document.getElementById('congrats').innerText = winner + " has won the game";
