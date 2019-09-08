@@ -11,7 +11,7 @@ var player2Card = document.getElementById('player2-card');
     if (player1Character === "Jon Snow") {
       localStorage.setItem("player1Character","JS");
 
-      // Connect to launch api and convert to json format
+      // Connect to api and convert to json format
       fetch('https://www.anapioficeandfire.com/api/characters?name=jon+snow')
       .then((response) => {
           return response.json();
@@ -41,7 +41,7 @@ var player2Card = document.getElementById('player2-card');
     player1Character = "Khal Drogo";
     if (player1Character === "Khal Drogo") {
       localStorage.setItem("player1Character","KD");
-      // Connect to launch api and convert to json format
+      // Connect to api and convert to json format
       fetch('https://www.anapioficeandfire.com/api/characters?name=drogo')
       .then((response) => {
           return response.json();
@@ -71,7 +71,7 @@ var player2Card = document.getElementById('player2-card');
     player1Character = "Grey Worm";
     if (player1Character === "Grey Worm") {
       localStorage.setItem("player1Character","GW");
-      // Connect to launch api and convert to json format
+      // Connect to api and convert to json format
       fetch('https://www.anapioficeandfire.com/api/characters?name=grey+worm')
       .then((response) => {
           return response.json();
@@ -102,7 +102,7 @@ var player2Card = document.getElementById('player2-card');
     player1Character = "Tormund";
     if (player1Character === "Tormund") {
       localStorage.setItem("player1Character","TG");
-      // Connect to launch api and convert to json format
+      // Connect to api and convert to json format
       fetch('https://www.anapioficeandfire.com/api/characters?name=tormund')
       .then((response) => {
           return response.json();
@@ -132,7 +132,7 @@ var player2Card = document.getElementById('player2-card');
     player1Character = "Viserys";
     if (player1Character === "Viserys") {
       localStorage.setItem("player1Character","VT");
-      // Connect to launch api and convert to json format
+      // Connect to api and convert to json format
       fetch('https://www.anapioficeandfire.com/api/characters?name=viserys+targaryen')
       .then((response) => {
           return response.json();
@@ -162,7 +162,7 @@ var player2Card = document.getElementById('player2-card');
     player2Character = "Daenerys";
     if (player2Character === "Daenerys") {
       localStorage.setItem("player2Character","DT");
-      // Connect to launch api and convert to json format
+      // Connect to api and convert to json format
       fetch('https://www.anapioficeandfire.com/api/characters?name=daenerys+targaryen')
       .then((response) => {
           return response.json();
@@ -192,7 +192,7 @@ var player2Card = document.getElementById('player2-card');
     player2Character = "Arya";
     if (player2Character === "Arya") {
       localStorage.setItem("player2Character","AS");
-      // Connect to launch api and convert to json format
+      // Connect to api and convert to json format
       fetch('https://www.anapioficeandfire.com/api/characters?name=arya+stark')
       .then((response) => {
           return response.json();
@@ -222,7 +222,7 @@ var player2Card = document.getElementById('player2-card');
     player2Character = "Sansa";
     if (player2Character === "Sansa") {
       localStorage.setItem("player2Character","SS");
-      // Connect to launch api and convert to json format
+      // Connect to api and convert to json format
       fetch('https://www.anapioficeandfire.com/api/characters?name=sansa+stark')
       .then((response) => {
           return response.json();
@@ -252,7 +252,7 @@ var player2Card = document.getElementById('player2-card');
     player2Character = "Missandei";
     if (player2Character === "Missandei") {
       localStorage.setItem("player2Character","M");
-      // Connect to launch api and convert to json format
+      // Connect to api and convert to json format
       fetch('https://www.anapioficeandfire.com/api/characters?name=missandei')
       .then((response) => {
           return response.json();
@@ -282,7 +282,7 @@ var player2Card = document.getElementById('player2-card');
     player2Character = "Margaery";
     if (player2Character === "Margaery") {
       localStorage.setItem("player2Character","MT");
-      // Connect to launch api and convert to json format
+      // Connect to api and convert to json format
       fetch('https://www.anapioficeandfire.com/api/characters?name=margaery+tyrell')
       .then((response) => {
           return response.json();
